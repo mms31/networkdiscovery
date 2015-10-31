@@ -13,7 +13,7 @@ class IprangesController < ApplicationController
     for i in 1..254
       puts "Value of local variable is #{i}"
       ipaddress="202.22.163.#{i}"
-      Ipaddress.addIPandPing(ipaddress)
+      Ipaddress.delay.addIPandPing(ipaddress)
     end
     redirect_to :controller => 'ipranges', :action => 'index', :alert => "Pay attention to the road",  :notice => "Pay attention to the road"
   end

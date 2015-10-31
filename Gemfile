@@ -30,6 +30,7 @@ gem 'puma'
 gem 'delayed_job_active_record'
 #Delayed job gives the ability to run jobs in the background
 
+gem 'net-ping'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
