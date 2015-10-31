@@ -1,0 +1,38 @@
+<p id="notice">
+  <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+  <% end -%>
+</p>
+
+
+<h1>Listing Ipranges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Crange</th>
+      <th>Start</th>
+      <th>End</th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ipranges.each do |iprange| %>
+      <tr>
+        <td><%= iprange.crange %></td>
+        <td><%= iprange.start %></td>
+        <td><%= iprange.end %></td>
+        <td><%= link_to 'Scan', {:controller => "ipranges", :action => "scan", :id => "1"} %></td>
+        <td><%= link_to 'Show', iprange %></td>
+        <td><%= link_to 'Edit', edit_iprange_path(iprange) %></td>
+        <td><%= link_to 'Destroy', iprange, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Iprange', new_iprange_path %>

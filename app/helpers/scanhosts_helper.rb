@@ -1,0 +1,2 @@
+module ScanhostsHelper
+end

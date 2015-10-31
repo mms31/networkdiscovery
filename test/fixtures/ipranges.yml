@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  crange: MyString
+  start: MyString
+  end: MyString
+
+two:
+  crange: MyString
+  start: MyString
+  end: MyString

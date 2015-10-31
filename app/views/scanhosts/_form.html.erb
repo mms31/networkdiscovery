@@ -1,0 +1,17 @@
+<%= form_for(@scanhost) do |f| %>
+  <% if @scanhost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scanhost.errors.count, "error") %> prohibited this scanhost from being saved:</h2>
+
+      <ul>
+      <% @scanhost.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

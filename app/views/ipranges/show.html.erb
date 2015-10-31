@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Crange:</strong>
+  <%= @iprange.crange %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @iprange.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @iprange.end %>
+</p>
+
+<%= link_to 'Edit', edit_iprange_path(@iprange) %> |
+<%= link_to 'Back', ipranges_path %>

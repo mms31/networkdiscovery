@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ipaddress: MyString
+  iprange: MyString
+  pingable: false
+
+two:
+  ipaddress: MyString
+  iprange: MyString
+  pingable: false
