@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Ipaddresses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ipaddress</th>
+      <th>Iprange</th>
+      <th>Pingable</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ipaddresses.each do |ipaddress| %>
+      <tr>
+        <td><%= ipaddress.ipaddress %></td>
+        <td><%= ipaddress.iprange %></td>
+        <td><%= ipaddress.pingable %></td>
+        <td><%= link_to 'Show', ipaddress %></td>
+        <td><%= link_to 'Edit', edit_ipaddress_path(ipaddress) %></td>
+        <td><%= link_to 'Destroy', ipaddress, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ipaddress', new_ipaddress_path %>

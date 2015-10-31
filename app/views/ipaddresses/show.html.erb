@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ipaddress:</strong>
+  <%= @ipaddress.ipaddress %>
+</p>
+
+<p>
+  <strong>Iprange:</strong>
+  <%= @ipaddress.iprange %>
+</p>
+
+<p>
+  <strong>Pingable:</strong>
+  <%= @ipaddress.pingable %>
+</p>
+
+<%= link_to 'Edit', edit_ipaddress_path(@ipaddress) %> |
+<%= link_to 'Back', ipaddresses_path %>

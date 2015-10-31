@@ -1,0 +1,29 @@
+<%= form_for(@iprange) do |f| %>
+  <% if @iprange.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@iprange.errors.count, "error") %> prohibited this iprange from being saved:</h2>
+
+      <ul>
+      <% @iprange.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :crange %><br>
+    <%= f.text_field :crange %>
+  </div>
+  <div class="field">
+    <%= f.label :start %><br>
+    <%= f.text_field :start %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br>
+    <%= f.text_field :end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

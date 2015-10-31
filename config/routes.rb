@@ -1,12 +1,28 @@
 Rails.application.routes.draw do
+  resources :ipaddresses
+  resources :ipranges do
+       member do
+         get 'scan'
+         post 'toggle'
+       end
+  end
+  
+  resources :scanhosts
+  resources :welcomes
+  resources :scanner
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
+
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcomes#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  
+  #get ''
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -53,4 +69,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  
 end
